@@ -1,14 +1,14 @@
 include .env
 
 up:
-	docker compose up -d
+	sudo docker compose up -d
 
 down:
-	docker compose down
+	sudo docker compose down
 
 restart:
-	docker compose down
-	docker compose up -d
+	sudo docker compose down
+	sudo docker compose up -d
 
 ps:
 	docker ps -a
@@ -23,8 +23,8 @@ db:
 
 # For the first time
 ini:
-	docker compose build
-	docker compose up -d
+	sudo docker compose build
+	sudo docker compose up -d
 	docker exec -it python python -m manage makemigrations accounts
 	docker exec -it python python -m manage makemigrations
 	docker exec -it python python -m manage migrate
@@ -44,8 +44,8 @@ repy:
 
 py-rebuild: # When new python package added and have to pip install
 	docker rmi alfind_python
-	docker compose build
-	docker compose up -d
+	sudo docker compose build
+	sudo docker compose up -d
 
 rmmigrations:
 	rm -rf src/backend/*/migrations/*
@@ -60,8 +60,8 @@ remote:
 
 remotedep:
 	git pull
-	docker compose down
-	docker compose up -d
+	sudo docker compose down
+	sudo docker compose up -d
 
 maintain:
 	docker stop nginx
