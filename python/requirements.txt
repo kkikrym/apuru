@@ -1,0 +1,14 @@
+ipython
+Pillow
+uWSGI
+django
+daphne
+psycopg2 #requied for django and postgresql
+django-extensions
+django-filter
+django-rest-framework
+django-allauth
+dj-rest-auth
+django-cors-headers
+djangorestframework-simplejwt
+django-rest-multiple-models

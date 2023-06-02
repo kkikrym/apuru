@@ -1,0 +1,6 @@
+logs/*/*
+.vscode
+*.ipynb
+*.pkl
+/.DS_Store/
+.env
