@@ -2,5 +2,5 @@ logs/*/*
 .vscode
 *.ipynb
 *.pkl
-/.DS_Store/
 .env
+/.DS_Store/
