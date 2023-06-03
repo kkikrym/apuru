@@ -11,39 +11,39 @@ restart:
 	sudo docker compose up -d
 
 ps:
-	docker ps -a
+	sudo docker ps -a
 
 
 reng:
-	docker restart nginx
+	sudo docker restart nginx
 ng:
-	docker exec -it nginx bash
+	sudo docker exec -it nginx bash
 db:
-	docker exec -it db psql -h localhost -p 5432 -U ${POSTGRES_USER} -d ${POSTGRES_DB}
+	sudo docker exec -it db psql -h localhost -p 5432 -U ${POSTGRES_USER} -d ${POSTGRES_DB}
 
 # For the first time
 ini:
 	sudo docker compose build
 	sudo docker compose up -d
-	docker exec -it python python -m manage makemigrations accounts
-	docker exec -it python python -m manage makemigrations
-	docker exec -it python python -m manage migrate
+	sudo docker exec -it python python -m manage makemigrations accounts
+	sudo docker exec -it python python -m manage makemigrations
+	sudo docker exec -it python python -m manage migrate
 
 # Django container
 py:
-	docker exec -it python bash
+	sudo docker exec -it python bash
 
 mgs:
-	docker exec -it python python -m manage makemigrations
+	sudo docker exec -it python python -m manage makemigrations
 
 migrate:
-	docker exec -it python python -m manage migrate
+	sudo docker exec -it python python -m manage migrate
 
 repy:
-	docker restart python
+	sudo docker restart python
 
 py-rebuild: # When new python package added and have to pip install
-	docker rmi alfind_python
+	sudo docker rmi alfind_python
 	sudo docker compose build
 	sudo docker compose up -d
 
@@ -64,4 +64,4 @@ remotedep:
 	sudo docker compose up -d
 
 maintain:
-	docker stop nginx
+	sudo docker stop nginx
