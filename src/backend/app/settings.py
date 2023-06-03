@@ -76,14 +76,8 @@ ROOT_URLCONF = 'app.urls'
 CORS_ALLOW_CREDENTIALS = True
 # アクセスを許可したいURL（アクセス元）を追加
 CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1',
-    'https://127.0.0.1',
-    'http://127.0.0.1:8001',
-    'https://127.0.0.1:8001',
-    'http://localhost:8001',
-    'https://localhost:8001',
     'http://localhost:8080',
-    'https://localhost:8080',
+    os.environ.get('REMOTE_IP'),
 ]
 
 TEMPLATES = [
