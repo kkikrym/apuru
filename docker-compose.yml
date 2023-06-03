@@ -12,8 +12,6 @@ services:
       - "80:80"
       - "443:443"
 
-    expose:
-      - 8001
     volumes:
       #- /etc/letsencrypt/:/etc/letsencrypt/
       - ./nginx/conf:/etc/nginx/conf.d
@@ -42,8 +40,7 @@ services:
       - ./logs/wsgi/:/var/log/wsgi
       - ./dev_configs/.vimrc:/root/.vimrc
       - ./dev_configs/.bash_aliases:/root/.bash_aliases
-    expose:
-      - 8001
+
     environment:
       PYTHONPATH: /src
       TZ: Asia/Tokyod
