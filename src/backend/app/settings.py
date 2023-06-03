@@ -81,7 +81,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 # アクセスを許可したいURL（アクセス元）を追加
 CORS_ALLOWED_ORIGINS = [
-    'wsgi',
+    #'wsgi',
     'http://' + str(os.environ.get('REMOTE_IP'))
 ]
 
