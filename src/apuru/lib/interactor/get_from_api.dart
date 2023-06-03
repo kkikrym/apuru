@@ -22,7 +22,12 @@ class ApiInteractor {
   }
 
   Future<Map<String, dynamic>> getFromApi(host, path) async {
-    http.Response res = await http.get(Uri.parse(host + path));
+    http.Response res = await http.get(Uri.parse(host + path), headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,PATCH,POST,DELETE",
+      "Access-Control-Allow-Headers":
+          "Origin, X-Requested-With, Content-Type, Accept"
+    });
     Map<String, dynamic> data = _requestToMap(res);
     return data;
   }
