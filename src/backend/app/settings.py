@@ -77,14 +77,15 @@ ROOT_URLCONF = 'app.urls'
 
 # 自身以外のオリジンのHTTPリクエスト内にクッキーを含めることを許可する
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS: True
 
 # アクセスを許可したいURL（アクセス元）を追加
-CORS_ALLOWED_ORIGINS = [
-    'http://127.0.0.1',
-    'http://localhost',
-    'http://localhost:8080',
-    'http://' + str(os.environ.get('REMOTE_IP'))
-]
+#CORS_ALLOWED_ORIGINS = [
+#    'http://127.0.0.1',
+#    'http://localhost',
+#    'http://localhost:8080',
+#    'http://' + str(os.environ.get('REMOTE_IP'))
+#]
 
 TEMPLATES = [
     {
