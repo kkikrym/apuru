@@ -2,3 +2,5 @@ static/*
 media/*
 !static/defaults
 !media/defaults
+*__pycache__/
+*migrations/

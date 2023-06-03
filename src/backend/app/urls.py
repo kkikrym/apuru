@@ -14,9 +14,37 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+############################################################################################################
+### DRF routers
+############################################################################################################
+from rest_framework import routers
+router = routers.DefaultRouter()
+
+from accounts.views import CustomUserViewSet
+router.register('users', CustomUserViewSet)
+
+############################################################################################################
+### url patterns
+############################################################################################################
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+import accounts.authviews
+import rest_framework.views
+from dj_rest_auth.views import LogoutView, UserDetailsView
+from dj_rest_auth.urls import TokenVerifyView
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('app_admin/', admin.site.urls),
+
+
+    path('auth/', include('dj_rest_auth.urls')),
+    path('auth/registration/', include('dj_rest_auth.registration.urls')),
+
+
+    # DRF api
+    path('api/', include(router.urls)),
+
 ]

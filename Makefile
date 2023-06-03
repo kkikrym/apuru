@@ -19,7 +19,7 @@ reng:
 ng:
 	docker exec -it nginx bash
 db:
-	docker exec -it postgres psql -h localhost -p 5432 -U ${POSTGRES_USER} -d ${POSTGRES_DB}
+	docker exec -it db psql -h localhost -p 5432 -U ${POSTGRES_USER} -d ${POSTGRES_DB}
 
 # For the first time
 ini:
