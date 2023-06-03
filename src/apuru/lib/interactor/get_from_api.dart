@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:apuru/interface/importer.dart';
 import 'package:http/http.dart' as http;
 
-const String hostPath = 'http://127.0.0.1:8001';
+const String hostPath = 'http://127.0.0.1';
 
 class ApiInteractor {
   final bool isAuthenticated = false;
