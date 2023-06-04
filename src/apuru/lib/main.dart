@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: custom_colors.scaffoldBackgroundColor,
         fontFamily: 'NotoSansJP',
       ),
-      title: 'アプるにょ〜ん Demo',
+      title: 'Parrot Counter',
       routerConfig: paths.router,
     );
   }

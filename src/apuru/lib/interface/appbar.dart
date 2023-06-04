@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
       ),
       */
       title: const Text(
-        'Parrot Gaming',
+        'Parrot Counter',
         style: TextStyle(color: blackText),
       ),
     );

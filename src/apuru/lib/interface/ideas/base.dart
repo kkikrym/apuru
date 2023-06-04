@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math' as math;
 
 import 'package:apuru/interface/components/components.dart';
+import 'package:stop_watch_timer/stop_watch_timer.dart';
 
 import 'package:intl/intl.dart';
 import '../importer.dart';
@@ -189,17 +190,32 @@ class IdeaPage extends StatefulWidget {
   const IdeaPage({super.key});
 
   @override
-  State<IdeaPage> createState() => _IdeaPageState();
+  State<IdeaPage> createState() => _GamePageState();
 }
 
-class _IdeaPageState extends State<IdeaPage> {
+class _InitPageState extends State<IdeaPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}
+
+class _GamePageState extends State<IdeaPage> {
   int parrots = 0;
-  late Timer _timer;
-  late DateTime _time;
+  final _stopWatchTimer = StopWatchTimer(
+    mode: StopWatchMode.countDown,
+  );
   @override
   void initState() {
-    _time = DateTime.utc(0, 0, 0);
+    _stopWatchTimer.setPresetSecondTime(30);
+    _stopWatchTimer.onStartTimer();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _stopWatchTimer.dispose();
+    super.dispose();
   }
 
   @override
@@ -221,6 +237,25 @@ class _IdeaPageState extends State<IdeaPage> {
             ),
             const SizedBox(width: 8),
             Text('$parrots parrots!!'),
+            const SizedBox(width: 20),
+            StreamBuilder<int>(
+              stream: _stopWatchTimer.rawTime,
+              initialData: _stopWatchTimer.rawTime.value,
+              builder: (context, snapshot) {
+                final displayTime = StopWatchTimer.getDisplayTime(
+                  snapshot.data!,
+                  hours: false,
+                );
+                return Center(
+                  child: SizedBox(
+                    child: Text(
+                      displayTime,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ),
+                );
+              },
+            ),
           ],
         ),
         const SizedBox(height: 20),

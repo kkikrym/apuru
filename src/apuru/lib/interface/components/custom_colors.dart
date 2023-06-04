@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 final scaffoldBackgroundColor = Colors.grey[80];
 
 const appBarBackgroundColor = Colors.white;
-final bottomNavigationColor = Colors.blueAccent.withOpacity(0.5);
-final bottomNavigationTabBackgroundColor = Colors.blueAccent.withOpacity(0.5);
+final bottomNavigationColor = Colors.blueAccent.withOpacity(0.8);
+final bottomNavigationTabBackgroundColor = Colors.blueAccent.withOpacity(0.8);
 
 // icons
 

@@ -10,7 +10,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(30, 8, 30, 8),
+      padding: const EdgeInsets.fromLTRB(60, 8, 60, 8),
       color: Colors.white.withOpacity(0.3),
       child: GNav(
         selectedIndex: _calculateSelectedIndex(context),
