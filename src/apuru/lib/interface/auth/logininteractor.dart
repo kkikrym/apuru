@@ -1,4 +1,0 @@
-
-class LoginInteractor {
-  const LoginInteractor();
-}

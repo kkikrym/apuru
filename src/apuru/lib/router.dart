@@ -1,10 +1,9 @@
 import 'package:apuru/interface/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'interface/ideas/base.dart' as idea_functions;
-import 'interface/timeline/base.dart' as timeline_functions;
+import 'interface/game/base.dart' as idea_functions;
+import 'interface/ranking/base.dart' as timeline_functions;
 import 'interface/appbar.dart';
-import 'interface/drawer.dart';
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Gorouter router
@@ -51,7 +50,6 @@ class _ShellScaffoldState extends State<ShellScaffold> {
           child: CustomAppBar(
             scaffoldKey: _scaffoldKey,
           )),
-      drawer: const CustomDrawer(),
       body: widget.child,
       bottomNavigationBar: const SafeArea(
         child: CustomBottomNavigationBar(),

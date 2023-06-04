@@ -12,11 +12,13 @@
 
 エラーが解決せず、当日の朝から急遽作ったParty Parrotの連打ゲーム
 
+スライド：
+
+https://docs.google.com/presentation/d/1ffrqEtd0fg0tWn_anxHExlnJrydDfTxP75MSy51_lYI/edit#slide=id.p
+
 ## Author
 
 チーム名：最強になるにょ〜ん
-
-メンバー：Kurayamy
 
 ## Requirements
 
