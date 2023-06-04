@@ -51486,7 +51486,7 @@ case 2:return A.W(o,r)}})
 return A.Y($async$kd,r)}}
 A.abh.prototype={}
 A.uw.prototype={
-gnS(){return"../static/defaults/parrot"},
+gnS(){return"../static/defaults/parrot.gif"},
 Dr(a){var s,r={},q=a.a
 if(q==null)q=$.UB()
 r.a=r.b=null
