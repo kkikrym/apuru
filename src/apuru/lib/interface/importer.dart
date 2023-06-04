@@ -5,6 +5,6 @@ export 'package:http/http.dart';
 export 'dart:convert';
 export 'package:google_nav_bar/google_nav_bar.dart';
 
-export '../interactor/mypage/userlist.dart';
+export '../interactor/timeline/userlist.dart';
 export 'components/custom_colors.dart';
 export 'components/assets.dart';

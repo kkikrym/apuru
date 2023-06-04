@@ -1,39 +1,34 @@
+
 import '../importer.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class IdeaPage extends StatefulWidget {
+  const IdeaPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<IdeaPage> createState() => _IdeaPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _IdeaPageState extends State<IdeaPage> {
+  int parrots = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: FutureBuilder(
-          future: getUserList(),
-          builder: (context, snapshot) {
-            // WhileConnecting
-            if (snapshot.connectionState != ConnectionState.done) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            // If error
-            if (snapshot.hasError) {
-              return Text(snapshot.error.toString());
-            }
-            // If data exists
-            if (snapshot.hasData) {
-              Map<String, dynamic> data = snapshot.data!;
-              return Text(data.toString());
-            } else {
-              return const Text('Nodata');
-            }
-          },
+        child: ListView(
+          children: const [
+            Image(
+              image: AssetImage('../static/defaults/parrot'),
+              fit: BoxFit.cover,
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: bottomNavigationColor,
+        child: const Icon(
+          Icons.add,
         ),
       ),
     );

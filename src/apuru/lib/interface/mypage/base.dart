@@ -1,4 +1,3 @@
-import 'package:apuru/interface/auth/logininteractor.dart';
 
 import '../importer.dart';
 

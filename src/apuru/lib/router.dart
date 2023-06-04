@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'interface/ideas/base.dart' as idea_functions;
 import 'interface/timeline/base.dart' as timeline_functions;
-import 'interface/components/custom_colors.dart' as custom_colors;
 import 'interface/appbar.dart';
 import 'interface/drawer.dart';
-import 'interface/bottom_navigation.dart';
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Gorouter router
@@ -20,15 +18,15 @@ final router = GoRouter(navigatorKey: _rootNavigatorKey, routes: [
       routes: <GoRoute>[
         GoRoute(
           path: tabList[0],
-          builder: (context, state) => const idea_functions.MyHomePage(),
+          builder: (context, state) => const idea_functions.IdeaPage(),
         ),
         GoRoute(
           path: tabList[1],
-          builder: (context, state) => const idea_functions.MyHomePage(),
+          builder: (context, state) => const timeline_functions.MyHomePage(),
         ),
         GoRoute(
           path: tabList[2],
-          builder: (context, state) => const idea_functions.MyHomePage(),
+          builder: (context, state) => const timeline_functions.MyHomePage(),
         )
       ])
 ]);

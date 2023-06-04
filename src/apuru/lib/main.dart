@@ -3,7 +3,8 @@ import 'package:url_strategy/url_strategy.dart';
 import 'router.dart' as paths;
 import 'interface/components/custom_colors.dart' as custom_colors;
 
-void main() {
+Future main() async {
+  //await dotenv.load(fileName: "../../../.env");
   setPathUrlStrategy();
   runApp(const MyApp());
 }
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: custom_colors.scaffoldBackgroundColor),
+        scaffoldBackgroundColor: custom_colors.scaffoldBackgroundColor,
+        fontFamily: 'NotoSansJP',
+      ),
       title: 'アプるにょ〜ん Demo',
       routerConfig: paths.router,
     );
