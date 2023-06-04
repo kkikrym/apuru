@@ -14,18 +14,22 @@ class _IdeaPageState extends State<IdeaPage> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: [
-            for (int i = 0; i <= parrots; i++)
-              Container(
-                  padding: const EdgeInsets.all(20),
-                  width: 100,
-                  height: 100,
-                  child: const Image(
-                    image: AssetImage('../static/defaults/parrot.gif'),
-                    fit: BoxFit.cover,
-                  ))
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              for (int i = 0; i <= parrots; i++)
+                Center(
+                  child: Container(
+                      padding: const EdgeInsets.all(20),
+                      width: 200,
+                      height: 200,
+                      child: const Image(
+                        image: AssetImage('../static/defaults/parrot.gif'),
+                        fit: BoxFit.cover,
+                      )),
+                )
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
