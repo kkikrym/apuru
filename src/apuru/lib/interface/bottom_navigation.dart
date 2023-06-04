@@ -2,8 +2,7 @@ import 'importer.dart';
 
 const List tabList = [
   '/',
-  '/timeline',
-  '/settings',
+  '/rankings',
 ];
 
 class CustomBottomNavigationBar extends StatelessWidget {
@@ -25,16 +24,12 @@ class CustomBottomNavigationBar extends StatelessWidget {
         gap: 8,
         tabs: const [
           GButton(
-            icon: Icons.add_reaction_sharp,
-            text: 'アイディア',
+            icon: Icons.egg,
+            text: 'パロット',
           ),
           GButton(
             icon: Icons.schedule_outlined,
-            text: 'タイムライン',
-          ),
-          GButton(
-            icon: Icons.settings,
-            text: 'マイページ',
+            text: 'ランキング',
           ),
         ],
       ),
@@ -46,8 +41,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
     final String location = route.location;
     if (location.startsWith(tabList[1])) {
       return 1;
-    } else if (location.startsWith(tabList[2])) {
-      return 2;
     } else {
       return 0;
     }
@@ -57,9 +50,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
     switch (index) {
       case 1:
         context.go(tabList[1]);
-        break;
-      case 2:
-        context.go(tabList[2]);
         break;
       case 0:
       default:

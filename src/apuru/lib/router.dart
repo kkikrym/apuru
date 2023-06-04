@@ -24,10 +24,6 @@ final router = GoRouter(navigatorKey: _rootNavigatorKey, routes: [
           path: tabList[1],
           builder: (context, state) => const timeline_functions.MyHomePage(),
         ),
-        GoRoute(
-          path: tabList[2],
-          builder: (context, state) => const timeline_functions.MyHomePage(),
-        )
       ])
 ]);
 
