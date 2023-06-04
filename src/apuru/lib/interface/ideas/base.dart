@@ -15,16 +15,25 @@ class _IdeaPageState extends State<IdeaPage> {
       body: Container(
         padding: const EdgeInsets.all(20),
         child: ListView(
-          children: const [
-            Image(
-              image: AssetImage('../static/defaults/parrot.gif'),
-              fit: BoxFit.cover,
-            )
+          children: [
+            for (int i = 0; i <= parrots; i++)
+              Container(
+                  padding: const EdgeInsets.all(20),
+                  width: 100,
+                  height: 100,
+                  child: const Image(
+                    image: AssetImage('../static/defaults/parrot.gif'),
+                    fit: BoxFit.cover,
+                  ))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            parrots += 1;
+          });
+        },
         backgroundColor: bottomNavigationColor,
         child: const Icon(
           Icons.add,
