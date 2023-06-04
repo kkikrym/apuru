@@ -1,4 +1,3 @@
-
 import 'importer.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -22,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
       ),
       */
       title: const Text(
-        'アプるにょ〜ん',
+        'Parrot Gaming',
         style: TextStyle(color: blackText),
       ),
     );
