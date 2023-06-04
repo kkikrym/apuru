@@ -129,7 +129,7 @@ class _IdeaPageState extends State<IdeaPage> {
                       height: imageWidth,
                       child: Image(
                         image: AssetImage(
-                            '$staticPath/${gifNames[math.Random().nextInt(gifNames.length)]}'),
+                            '$staticPath/defaults/hd/${gifNames[math.Random().nextInt(gifNames.length)]}'),
                         fit: BoxFit.cover,
                       )),
                 ),

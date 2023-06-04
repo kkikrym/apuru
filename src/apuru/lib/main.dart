@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'router.dart' as paths;
 import 'interface/components/custom_colors.dart' as custom_colors;
-import 'dart:async';
-import 'dart:io';
 
 List<String> gifNames = [];
 
 main() {
-  //await dotenv.load(fileName: "../../../.env");
   setPathUrlStrategy();
   runApp(const MyApp());
 }

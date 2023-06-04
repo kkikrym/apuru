@@ -41487,7 +41487,7 @@ s=A.JY(A.a([B.J0,B.J1,A.ic(""+this.d+" parrots!!",n,n,n)],l),B.bJ,B.eN,B.aY)
 m=A.bp(a,n,m).w
 r=A.a([],l)
 for(q=0;q<this.d;++q){p=$.aF8
-r.push(new A.pz(B.I,n,n,A.dR(n,new A.qn(new A.pq("../static/"+p[B.yK.adC(67)]),B.jy,n),B.m,n,n,n,n,k,n,B.aS,n,n,k),n))}p=A.aoS(r,!0,!0,!0)
+r.push(new A.pz(B.I,n,n,A.dR(n,new A.qn(new A.pq("../static/defaults/hd/"+p[B.yK.adC(67)]),B.jy,n),B.m,n,n,n,n,k,n,B.aS,n,n,k),n))}p=A.aoS(r,!0,!0,!0)
 r=r.length
 o=!0
 o=o?B.jq:n
