@@ -1,4 +1,3 @@
-
 import '../importer.dart';
 
 class IdeaPage extends StatefulWidget {
@@ -18,7 +17,7 @@ class _IdeaPageState extends State<IdeaPage> {
         child: ListView(
           children: const [
             Image(
-              image: AssetImage('../static/defaults/parrot'),
+              image: AssetImage('../static/defaults/parrot.gif'),
               fit: BoxFit.cover,
             )
           ],
