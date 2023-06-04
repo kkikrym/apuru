@@ -196,7 +196,13 @@ class IdeaPage extends StatefulWidget {
 class _InitPageState extends State<IdeaPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: ElevatedButton(onPressed: () {}, child: Text('Start!!!')),
+        ),
+      ),
+    );
   }
 }
 
